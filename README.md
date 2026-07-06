@@ -81,7 +81,7 @@ sudo nano /etc/nginx/ugreen.conf
 	######################################################################
 ```
 
-2.4： 重载配置
+2.4： 重载Nginx配置
 
 ```shell
 sudo nginx -s reload
@@ -92,6 +92,8 @@ sudo nginx -s reload
 尽情访问你的docker应用吧
 
 ### 4、还原设置
+
+SSH 到 NAS 
 ```shell
 sudo cp /etc/nginx/ugreen.conf.bak /etc/nginx/ugreen.conf
 sudo nginx -s reload
