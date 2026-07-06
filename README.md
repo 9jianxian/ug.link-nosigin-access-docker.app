@@ -94,6 +94,7 @@ sudo nginx -s reload
 ### 4、还原设置
 
 SSH 到 NAS 
+
 ```shell
 sudo cp /etc/nginx/ugreen.conf.bak /etc/nginx/ugreen.conf
 sudo nginx -s reload
