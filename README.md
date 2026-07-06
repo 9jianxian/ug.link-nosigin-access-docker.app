@@ -45,9 +45,9 @@ sudo nano /etc/nginx/ugreen.conf
 	# app - docker端口号 - uglink的ID.cn57.ugdocker.link
 	# cn57可能是最近的服务器,根据自己登录后的来
 	#
-	# 要先访问一次获得 cookie 
+	# 跳转拦截标识
 	set $is_ok 0;
-	#给个默认cookie,以防无限重定向
+	# 给个默认cookie,以防无限重定向
 	set $my_token "go302:no";
 	# 添加后台代理验证 cookie，数字是docker开放的端口号，你有几个docker想搞就搞几个
 	# 换成你自己的 cooike!!!
