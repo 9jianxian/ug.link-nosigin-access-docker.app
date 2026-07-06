@@ -49,11 +49,11 @@ sudo nano /etc/nginx/ugreen.conf
 	set $is_ok 0;
 	# 给个默认cookie,以防无限重定向
 	set $my_token "go302:no";
-	# 添加后台代理验证 cookie，数字是docker开放的端口号，你有几个docker想搞就搞几个
+	# 设置 cookie 值
 	# 换成你自己的 端口!!!
 	# 换成你自己的 cooike!!!
-	# 不能设置成统一的，不然就会访问不了，每个链接的都是不一样的
-	#
+	# 你有几个 你就再起几个，下面的8848，43955是端口
+	# 最好不要设置含有重复数字的端口，比如 1234，11234，如果这样设置，1234应该在上面
 	if ($host ~* "8848") {
 		set $my_token "ugreen-proxy-token=cc71adb9-9e24-4b61-923e-3b0d9864bb97";
 	}
