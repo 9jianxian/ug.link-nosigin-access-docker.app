@@ -97,10 +97,10 @@ sudo nginx -s reload
 
 ```mermaid
 graph TD
-    A[访问ugdocker.link] --> B[跳转sock]
-    B --> C{验证是否有token}
-    C -- Yes --> D[访问成功]
-    C -- No --> E[跳到ug.link登录]
+    A[1.访问ugdocker.link] --> B[2.跳转sock页面]
+    B --> C{3.校验请求是否携带token}
+    C -- Yes --> D[4.访问成功]
+    C -- No --> E[5.重定向至ug.link登录页]
 ```
 
 **修改后**
