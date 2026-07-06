@@ -47,11 +47,8 @@ sudo nano /etc/nginx/ugreen.conf
 	#
 	# 要先访问一次获得 cookie 
 	set $is_ok 0;
-	set $my_token "";
-	# 判断域名是否含有 ugdocker.link
-	if ($host ~* ugdocker\.link) {
-		set $is_ok 1;
-	}
+	#给个默认cookie,以防无限重定向
+	set $my_token "go302:no";
 	# 添加后台代理验证 cookie，数字是docker开放的端口号，你有几个docker想搞就搞几个
 	# 换成你自己的 cooike!!!
 	# 换成你自己的 cooike!!!
@@ -64,17 +61,22 @@ sudo nano /etc/nginx/ugreen.conf
 	if ($host ~* "43955") {
 		set $my_token "ugreen-proxy-token=c5107ecb-bfdb-4a4b-a06d-10f83664525a";
 	}
+	# 判断域名是否含有 ugdocker.link
+	if ($host ~* ugdocker\.link) {
+		set $is_ok 1;
+	}
 	# 判断是否带 cookie
 	if ($http_cookie != "") {
 		set $is_ok 0;
 	}
-	# 判断是否来自ug.link，来自ug.link 的会自带token，不做重定向
+	# 判断是否来自ug.link，来自ug.link 的会自带token
 	if ($http_referer ~* ug\.link) {
 		set $is_ok 0;
 	}
+	proxy_set_header Referer $myp_referer;
 	# 如果直接访问的是 app-xx-xx.xx.ugdocker.link，且不带 cookie，那么设置cookie并重定向再次访问这个网站
 	if ($is_ok = 1) {
-		add_header Set-Cookie "$my_token; Path=/; HttpOnly; Secure";
+		add_header Set-Cookie "$my_token;Path=/; HttpOnly; Secure";
 		return 302 "$scheme://$host";
 	}
 	#
