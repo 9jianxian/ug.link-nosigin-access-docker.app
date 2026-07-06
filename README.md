@@ -91,7 +91,11 @@ sudo nginx -s reload
 
 尽情访问你的docker应用吧
 
-
+### 4、还原设置
+```shell
+sudo cp /etc/nginx/ugreen.conf.bak /etc/nginx/ugreen.conf
+sudo nginx -s reload
+```
 
 ## 大致流程
 
