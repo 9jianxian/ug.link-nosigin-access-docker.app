@@ -96,7 +96,7 @@ sudo nginx -s reload
 
 写到文件里单独引用也是可以的
 
-![bbb]{https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/bbb.png}
+![bbb](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/bbb.png)
 
 
 ### 4、还原设置
