@@ -94,6 +94,10 @@ sudo nginx -s reload
 
 如果你代理了个apache、nginx这些中间件，那么理论上来说，你可以通过一个端口，加指定路径 代理所有内网服务。
 
+写到文件里单独引用也是可以的
+
+![bbb]{https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/bbb.png}
+
 
 ### 4、还原设置
 
