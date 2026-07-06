@@ -1,5 +1,5 @@
 # ug.link-nosigin-access-docker.app
-ug.link 无验证访问docker应用的方法
+ug.link 无验证访问docker应用的方法,不需要其他东西配合，纯改配置文件
 
 ### 1、
 
@@ -17,7 +17,8 @@ ssh 到你的 NAS，这我就不教了
 2.2：执行下面命令修改默认配置文件
 
 ```shell
-sudo nano /etc/nginx/ugreen.cof
+sudo cp /etc/nginx/ugreen.conf /etc/nginx/ugreen.conf.bak
+sudo nano /etc/nginx/ugreen.conf
 ```
 
 2.3 在下图为止插入代码
