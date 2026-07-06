@@ -56,6 +56,7 @@ sudo nano /etc/nginx/ugreen.conf
 	if ($host ~* "43955") {
 		set $my_token "ugreen-proxy-token=c5107ecb-bfdb-4a4b-a06d-10f83664525a";
 	}
+	# 判断是否带 cookie
 	if ($http_cookie != "") {
 		set $is_ok 0;
 	}
