@@ -71,7 +71,6 @@ sudo nano /etc/nginx/ugreen.conf
 	if ($http_referer ~* ug\.link) {
 		set $is_ok 0;
 	}
-	proxy_set_header Referer $myp_referer;
 	# 如果直接访问的是 app-xx-xx.xx.ugdocker.link，且不带 cookie，那么设置cookie并重定向再次访问这个网站
 	if ($is_ok = 1) {
 		add_header Set-Cookie "$my_token;Path=/; HttpOnly; Secure";
