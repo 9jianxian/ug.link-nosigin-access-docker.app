@@ -37,18 +37,16 @@ sudo nano /etc/nginx/ugreen.conf
 
 ```conf
 	######################################################################
-	#
-	# ug.link直接访问docker应用不做登录验证
-	# 
-	# 生成的访问链接格式：
+	# uulink 生成 docker 的访问链接格式：
 	# app-xx-xx.xx.ugdocker.link
 	# app - docker端口号 - uglink的ID.cn57.ugdocker.link
-	# cn57可能是最近的服务器,根据自己登录后的来
+	# cn57可能是最近的服务器
 	#
 	# 跳转拦截标识
 	set $is_ok 0;
 	# 给个默认cookie,以防无限重定向
 	set $my_token "go302:no";
+	#
 	# 设置 cookie 值
 	# 换成你自己的 端口!!!
 	# 换成你自己的 cooike!!!
@@ -60,6 +58,7 @@ sudo nano /etc/nginx/ugreen.conf
 	if ($host ~* "43955") {
 		set $my_token "ugreen-proxy-token=c5107ecb-bfdb-4a4b-a06d-10f83664525a";
 	}
+	#
 	# 判断域名是否含有 ugdocker.link
 	if ($host ~* ugdocker\.link) {
 		set $is_ok 1;
