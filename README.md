@@ -37,7 +37,7 @@ sudo nano /etc/nginx/ugreen.conf
 
 ```conf
 	######################################################################
-	# uulink 生成 docker 的访问链接格式：
+	# ug.link 生成 docker 的访问链接格式：
 	# app-xx-xx.xx.ugdocker.link
 	# app - docker端口号 - uglink的ID.cn57.ugdocker.link
 	# cn57可能是最近的服务器
