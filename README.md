@@ -93,6 +93,7 @@ sudo nginx -s reload
 
 如果你代理了个apche、nginx这些中间件，那么理论上来说，你可以通过一个端口，加指定路径 代理所有内网服务
 
+
 ### 4、还原设置
 
 SSH 到 NAS 
