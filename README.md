@@ -24,15 +24,22 @@ graph TD
 
 ```mermaid
 graph TD
-    A[访问ugdocker.link] --> B{验证网站地址是否含ugdocker.link}
-    B -- Yes --> C{验证是否有token}
-    C -- No --> D{验证来源是否是ug.link}
-    C -- Yes --> I[跳转sock]
-    F -- "重定向返回" -->A
-    D -- No --> I[跳转sock]
-    D -- No --> F[设置cookie]
-	B -- No --> I
-    I --> G[访问成功]
+    A[1.访问ugdocker.link] --> B{2.验证域名是否为ugdocker.link}
+    %% 域名校验分支
+    B -- Yes --> C{3.校验请求携带token?}
+    B -- No --> H[7.跳转sock服务]
+    
+    %% 有token分支
+    C -- Yes --> H[7.跳转sock服务]
+    
+    %% 无token分支
+    C -- No --> D{4.校验来源域名是否ug.link}
+    D -- Yes --> H[7.跳转sock服务]
+    D -- No --> F[5.写入Cookie标识]
+    F -- 重定向 --> A[1.访问ugdocker.link]
+    
+    %% 统一出口
+    H --> G[8.页面访问成功]
 ```
 
 ### 1、
