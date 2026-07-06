@@ -72,7 +72,7 @@ sudo nano /etc/nginx/ugreen.conf
 	if ($http_referer ~* ug\.link) {
 		set $is_ok 0;
 	}
-	# 如果直接访问的是 app-xx-xx.xx.ugdocker.link，且不带 cookie，那么返回cookie并重定向再次访问这个网站
+	# 如果直接访问的是 app-xx-xx.xx.ugdocker.link，且不带 cookie，那么设置cookie并重定向再次访问这个网站
 	if ($is_ok = 1) {
 		add_header Set-Cookie "$my_token; Path=/; HttpOnly; Secure";
 		return 302 "$scheme://$host";
@@ -90,6 +90,8 @@ sudo nginx -s reload
 ### 3、尽情访问
 
 尽情访问你的docker应用吧
+
+
 
 ## 大致流程
 
