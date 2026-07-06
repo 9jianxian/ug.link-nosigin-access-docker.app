@@ -17,7 +17,7 @@ graph TD
     A[访问ugdocker.link] --> B[跳转sock]
     B --> C{验证是否有token}
     C -- Yes --> D[访问成功]
-    C -- No --> E[登录ug.link]
+    C -- No --> E[跳到ug.link登录]
 ```
 
 **修改后**
