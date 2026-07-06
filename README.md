@@ -29,7 +29,7 @@ sudo cp /etc/nginx/ugreen.conf /etc/nginx/ugreen.conf.bak
 sudo nano /etc/nginx/ugreen.conf
 ```
 
-2.3 在下图为止插入代码,**注意看server_name是否如图所示**
+2.3 在下图位置插入代码,**注意看server_name是否如图所示**
 
 ![aaa](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/aaa.png)
 
