@@ -123,7 +123,7 @@ graph TD
 graph TD
     A[1.访问ugdocker.link] --> B{2.验证域名是否为ugdocker.link}
     %% 域名校验分支
-    B -- Yes --> C{3.校验请求携带token?}
+    B -- Yes --> C{3.校验请求携带cookie?}
     B -- No --> H[7.跳转sock服务]
     
     %% 有token分支
