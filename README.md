@@ -11,7 +11,7 @@ ssh 到你的 NAS，这我就不教了
 
 ​	浏览器登录ug.link，访问到你的docker网站 ---》键盘按下 F12
 
-[000](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/000.png)
+![000](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/000.png)
 
 
 2.2：执行下面命令修改默认配置文件
@@ -22,7 +22,7 @@ sudo nano /etc/nginx/ugreen.cof
 
 2.3 在下图为止插入代码
 
-[aaa](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/aaa.png)
+![aaa](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/aaa.png)
 
 根据需求更改,后保存
 
