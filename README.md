@@ -96,6 +96,15 @@ sudo nginx -s reload
 
 2.5： 访问你的网站测试
 
+### 3、还原设置
+
+SSH 到 NAS 
+
+```shell
+sudo cp /etc/nginx/ugreen.conf.bak /etc/nginx/ugreen.conf
+sudo nginx -s reload
+```
+
 ## 后话
 
 
@@ -107,15 +116,6 @@ sudo nginx -s reload
 
 ![bbb](https://github.com/9jianxian/ug.link-nosigin-access-docker.app/blob/main/img/bbb.png)
 
-
-### 4、还原设置
-
-SSH 到 NAS 
-
-```shell
-sudo cp /etc/nginx/ugreen.conf.bak /etc/nginx/ugreen.conf
-sudo nginx -s reload
-```
 
 ## 大致流程
 
