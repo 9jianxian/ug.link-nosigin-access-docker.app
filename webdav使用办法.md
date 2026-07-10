@@ -1,8 +1,8 @@
 # 使用ug.link访问NAS的办法
 
-在NAS /etc/nginx/conf.d/ 下新建个配置文件 webdav.conf
+**该方法基于ug社区改进。**
 
-该方法基于ug社区改进。
+在NAS /etc/nginx/conf.d/ 下新建个配置文件 webdav.conf
 
 ```shell
 sudo nano /etc/nginx/conf.d/webdav.conf
